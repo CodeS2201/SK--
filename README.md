@@ -2,8 +2,11 @@
 Repository for the programming language SK++ developed by Sourish Tilwankar and Kriday Lalwani
 <br>
 ## Intro to SK++
-SK++ was developed by two 14 year old wannabe devs in their free time instead of actually studying. <br>
-This is just a personal project for now, but might be scaled to be a real language one day. <br>
+SK++ is a modern programming language. It was built by us when we realized that there weren't many good abstract interfaces over low level workings of memory,
+memory addresses, bitwise operations and pointers. These concepts are very necessary for memory management and efficiency. <br>
+But, there stood a problem. Modern languages which use garbage collectors for memory management, are not very efficient. For such tasks near the hardware layer, we use languages like C and C++. The concepts in these languages for low-level control, are quite difficult to grasp, and allow for a huge range of errors. <br>
+SK++ makes it easy to program such task, by providing a layer of abstraction which is very easy to learn. <br>
+With SK++ you can build performant applications, iot devices, robots which need precision, etc.
 ## Basic Syntax
 ### Declaring our main method/function:
 ```
@@ -62,15 +65,31 @@ run main() {
 ```
 
 ## Loops
-Loops in SK++ consist of the traditional **while** and **for** loops, which can be initiated with keywords **till** and **untill** respectively.
-### While Loop
+Loops in SK++ consist of the traditional **for** loop, which can be initiated with keyword **iterate**, and a new, simpler loop, the **untill** loop.
+SK++ also provides an **each** loop to iterate over structures.
+We can add conditional statements in the loop which runs untill the statement is true.
+### untill Loop
 ```
 run main() {
   num i = 0;
-  till(i <= 10) {
+  untill(i is 10) {
     writeNL(i);
-    i++; // i = i + 1
+    increment(i);
   }
+}
+```
+
+More conditionals in the loop:
+
+```
+run main() {
+  num:mini i = 0;
+  int:block[] myArray = [13, 5, 20, 14]; 
+  untill(i is in myArray) {
+    writeNL('loop is running!');
+    increment(i);
+  }
+  // runs 6 times.
 }
 ```
 
@@ -79,8 +98,19 @@ run main() {
 ### For Loop
 ```
 run main() {
-  untill(num i = 0; i <= 10; i++) {
+  iterate(i from 1 to 10) {
     writeNL(i);
   }
+}
+```
+
+### each loop
+```
+initialize MAP(txt, num):hash as hashmap;
+hashmap.write('first', 1);
+hashmap.write('second', 2);
+hashmap.write('third', 3);
+each(key, value in hashmap) {
+  writeNL(key + ': ' + value);
 }
 ```
