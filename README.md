@@ -106,11 +106,28 @@ run main() {
 
 ### each loop
 ```
-initialize MAP(txt, num):hash as hashmap;
-hashmap.write('first', 1);
-hashmap.write('second', 2);
-hashmap.write('third', 3);
-each(key, value in hashmap) {
-  writeNL(key + ': ' + value);
+use "standard.sklib";
+
+run main() {
+  init MAP:hash(txt, num) as hashmap;
+  hashmap.write('first', 1);
+  hashmap.write('second', 2);
+  hashmap.write('third', 3);
+  each(key, value in hashmap) {
+    writeNL(key + ': ' + value);
+  }
+}
+```
+
+## Implement Efficient Data Structures with ease
+You can use the **init** before using an object. There are implementation of many data structures in the standard library:
+
+```
+use "standard.sklib";
+
+run main() {
+  init LIST:linked:singly(var) as sll;
+  sll.addTail('first element');
+  sll.addHead(15);
 }
 ```
