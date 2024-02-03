@@ -3,10 +3,10 @@ Repository for the programming language SK++ developed by Sourish Tilwankar and 
 <br>
 ## Intro to SK++
 SK++ is a modern programming language. It was built by us when we realized that there weren't many good abstract interfaces over low level workings of memory,
-memory addresses, bitwise operations and pointers. These concepts are very necessary for memory management and efficiency. <br>
-But, there stood a problem. Modern languages which use garbage collectors for memory management, are not very efficient. For such tasks near the hardware layer, we use languages like C and C++. The concepts in these languages for low-level control, are quite difficult to grasp, and allow for a huge range of errors. <br>
+memory addresses, bitwise operations and pointers. These concepts are very necessary for memory management and efficiency. <br><br>
+But, there stood a problem. Modern languages which use garbage collectors for memory management, are not very efficient. For such tasks near the hardware layer, we use languages like C and C++. The concepts in these languages for low-level control, are quite difficult to grasp, and allow for a huge range of errors. <br><br>
 SK++ makes it easy to program such task, by providing a layer of abstraction which is very easy to learn. <br>
-With SK++ you can build performant applications, iot devices, robots which need precision, etc.
+With SK++ you can build performant applications, iot devices, robots which need precision, etc. <br>
 ## Basic Syntax
 ### Declaring our main method/function:
 ```
